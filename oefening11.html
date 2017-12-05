@@ -1,0 +1,201 @@
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="./robot-arm.js"></script>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            var a = 0
+            var b = 0
+            var c = 0
+            var d = 0
+            var e = 0
+            var f = 0
+
+            robotArm.loadLevel("exercise 12");
+
+
+
+            robotArm.grab();
+            var color = robotArm.scan();
+
+            if (color === 'red') {
+              for (y=0;y<9;y++) {
+              robotArm.moveRight();
+            }
+              robotArm.drop();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+            } else {
+              robotArm.drop();
+              robotArm.moveRight();
+            }
+
+
+
+            robotArm.grab();
+            var color = robotArm.scan();
+
+            if (color === 'red') {
+              for (x=0;x<8;x++) {
+              robotArm.moveRight();
+            }
+              robotArm.drop();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+            } else {
+              robotArm.drop();
+              robotArm.moveRight();
+            }
+
+
+
+
+            robotArm.grab();
+            var color = robotArm.scan();
+
+            if (color === 'red') {
+              for (z=0;z<7;z++) {
+              robotArm.moveRight();
+            }
+              robotArm.drop();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+            } else {
+              robotArm.drop();
+              robotArm.moveRight();
+            }
+
+
+
+
+            robotArm.grab();
+            var color = robotArm.scan();
+
+            if (color === 'red') {
+              for (a=0;a<6;a++) {
+              robotArm.moveRight();
+            }
+              robotArm.drop();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+            } else {
+              robotArm.drop();
+              robotArm.moveRight();
+            }
+
+
+
+
+            robotArm.grab();
+            var color = robotArm.scan();
+
+            if (color === 'red') {
+              for (b=0;b<5;b++) {
+              robotArm.moveRight();
+            }
+              robotArm.drop();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+            } else {
+              robotArm.drop();
+              robotArm.moveRight();
+            }
+
+
+
+
+            robotArm.grab();
+            var color = robotArm.scan();
+
+            if (color === 'red') {
+              for (c=0;c<4;c++) {
+              robotArm.moveRight();
+            }
+              robotArm.drop();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+            } else {
+              robotArm.drop();
+              robotArm.moveRight();
+            }
+
+
+
+
+            robotArm.grab();
+            var color = robotArm.scan();
+
+            if (color === 'red') {
+              for (d=0;d<3;d++) {
+              robotArm.moveRight();
+            }
+              robotArm.drop();
+              robotArm.moveLeft();
+              robotArm.moveLeft();
+            } else {
+              robotArm.drop();
+              robotArm.moveRight();
+            }
+
+
+
+
+            robotArm.grab();
+            var color = robotArm.scan();
+
+            if (color === 'red') {
+              for (e=0;e<2;e++) {
+              robotArm.moveRight();
+            }
+              robotArm.drop();
+              robotArm.moveLeft();
+            } else {
+              robotArm.drop();
+              robotArm.moveRight();
+            }
+
+
+
+
+            robotArm.grab();
+            var color = robotArm.scan();
+
+            if (color === 'red') {
+              for (f=0;f<1;f++) {
+              robotArm.moveRight();
+            }
+              robotArm.drop();
+
+            } else {
+              robotArm.drop();
+              robotArm.moveRight();
+            }
+
+
+
+          robotArm.run();
+        </script>
+    </body>
+</html>
